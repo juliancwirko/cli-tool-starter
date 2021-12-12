@@ -1,0 +1,47 @@
+{
+  "name": "cli-tool-starter",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "types": "build/types",
+  "version": "1.0.0",
+  "description": "CLI tool starter",
+  "main": "build/index.js",
+  "bin": {
+    "cli-tool-starter": "./build/index.js"
+  },
+  "scripts": {
+    "generate": "npm run build && node build/index.js",
+    "build": "rimraf build && node ./esbuild.config.js && tsc",
+    "dev:lint": "eslint src/** --fix",
+    "dev:prettier": "prettier --write 'src/**/*.{js,ts,json}'",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "cli"
+  ],
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@types/prompt": "^1.1.2",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "@typescript-eslint/parser": "^4.27.0",
+    "esbuild": "^0.14.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "cosmiconfig": "^7.0.1",
+    "prompt": "^1.2.0"
+  }
+}
