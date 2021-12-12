@@ -19,13 +19,13 @@ It is a quick starter for CLI tools written in Node. Typescript, Prettier and Es
 
 The `cli-tool-starter` is the name of your cli tool. Change it in the package.json file. In two places:
 
-```json
+```
 (...)
 "name": "cli-tool-starter",
 (...)
 ```
 
-```json
+```
 (...)
 "bin": {
   "cli-tool-starter": "./build/index.js"
